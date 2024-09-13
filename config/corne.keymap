@@ -21,11 +21,22 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y    &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&kp LCTRL  &kp A  &kp S  &kp D     &kp F  &kp G        &kp H    &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                         &kp LGUI  &mo 1  &kp SPACE    &kp RET  &mo 2  &kp RALT
+&kp TAB           &kp Q             &kp W        &kp E           &kp R           &kp T        &kp Y      &kp U            &kp I            &kp O        &kp P     &kp DELETE
+&mt LCTRL ESCAPE  &mt LEFT_SHIFT A  &mt LCTRL S  &mt LEFT_ALT D  &mt LEFT_GUI F  &kp G        &kp H      &mt RIGHT_GUI J  &mt RIGHT_ALT K  &mt RCTRL L  &kp SEMI  &kp SQT
+&kp LSHFT         &kp Z             &kp X        &kp C           &kp V           &kp B        &kp N      &kp M            &kp COMMA        &kp DOT      &kp FSLH  &kp RIGHT_SHIFT
+                                                 &kp LGUI        &mo 2           &kp ENTER    &kp SPACE  &mo 3            &kp BACKSPACE
             >;
+        };
+
+        colemak_layer {
+            bindings = <
+&kp TAB    &kp Q  &kp W  &kp F     &kp P  &kp B        &kp J      &kp L  &kp U      &kp Y    &kp SEMI  &kp DELETE
+&kp LCTRL  &kp A  &kp R  &kp S     &kp T  &kp G        &kp M      &kp N  &kp E      &kp I    &kp O     &kp APOS
+&kp LSHFT  &kp Z  &kp X  &kp C     &kp D  &kp V        &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+                         &kp LGUI  &mo 2  &kp ENTER    &kp SPACE  &mo 3  &kp BSPC
+            >;
+
+            label = "COLEMAK";
         };
 
         lower_layer {
@@ -41,6 +52,8 @@
 &kp LSHFT   &trans        &trans        &trans        &trans        &trans          &trans    &trans    &trans    &trans     &trans  &trans
                                         &kp LGUI      &trans        &kp SPACE       &kp RET   &trans    &kp RALT
             >;
+
+            label = "LWR";
         };
 
         raise_layer {
@@ -56,6 +69,19 @@
 &kp LSHFT  &trans    &trans  &trans     &trans    &trans       &kp UNDER  &kp PLUS   &kp LBRC         &kp RBRC  &kp PIPE  &kp TILDE
                              &kp LGUI   &trans    &kp SPACE    &kp RET    &trans     &kp RALT
             >;
+
+            label = "RSE";
+        };
+
+        system_layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+
+            label = "SYS";
         };
     };
 };
