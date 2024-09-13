@@ -43,8 +43,49 @@ layers:
   - ␣
   - raise
   - BACKSPACE
-  colemak: [↹, Q, W, F, P, B, J, L, U, Y, ;, DELETE, Ctrl, A, R, S, T, G, M, N, E, I, O, '''', Shift, Z, X, C, D, V, K, H, ',', ., /, Shift, Gui, lower, ENTER, ␣,
-    raise, ⌫]
+  colemak:
+  - ↹
+  - Q
+  - W
+  - F
+  - P
+  - B
+  - J
+  - L
+  - U
+  - Y
+  - ;
+  - DELETE
+  - Ctrl
+  - {t: A, h: LEFT SHIFT}
+  - {t: R, h: Ctrl}
+  - {t: S, h: LEFT ALT}
+  - {t: T, h: LEFT GUI}
+  - G
+  - M
+  - {t: N, h: RIGHT GUI}
+  - {t: E, h: RIGHT ALT}
+  - {t: I, h: Ctrl}
+  - O
+  - ''''
+  - Shift
+  - Z
+  - X
+  - C
+  - D
+  - V
+  - K
+  - H
+  - ','
+  - .
+  - /
+  - Shift
+  - Gui
+  - lower
+  - ENTER
+  - ␣
+  - raise
+  - ⌫
   lower:
   - ↹
   - '1'
@@ -52,7 +93,7 @@ layers:
   - '3'
   - '4'
   - '5'
-  - '6'
+  - SELECT
   - '7'
   - '8'
   - '9'
