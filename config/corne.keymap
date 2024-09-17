@@ -13,7 +13,18 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        colemak_layer {
+            bindings = <
+&kp TAB           &kp Q             &kp W        &kp F           &kp P           &kp B        &kp J      &kp L            &kp U            &kp Y        &kp SEMI  &kp DELETE
+&mt LCTRL ESCAPE  &mt LEFT_SHIFT A  &mt LCTRL R  &mt LEFT_ALT S  &mt LEFT_GUI T  &kp G        &kp M      &mt RIGHT_GUI N  &mt RIGHT_ALT E  &mt RCTRL I  &kp O     &kp APOS
+&kp LSHFT         &kp Z             &kp X        &kp C           &kp D           &kp V        &kp K      &kp H            &kp COMMA        &kp DOT      &kp FSLH  &kp RSHFT
+                                                 &kp LGUI        &mo 2           &kp ENTER    &kp SPACE  &mo 3            &kp BSPC
+            >;
+
+            label = "COLEMAK";
+        };
+
+        qwerty_layer {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
@@ -26,17 +37,8 @@
 &kp LSHFT         &kp Z             &kp X        &kp C           &kp V           &kp B        &kp N      &kp M            &kp COMMA        &kp DOT      &kp FSLH  &kp RIGHT_SHIFT
                                                  &kp LGUI        &mo 2           &kp ENTER    &kp SPACE  &mo 3            &kp BACKSPACE
             >;
-        };
 
-        colemak_layer {
-            bindings = <
-&kp TAB    &kp Q             &kp W        &kp F           &kp P           &kp B        &kp J      &kp L            &kp U            &kp Y        &kp SEMI  &kp DELETE
-&kp LCTRL  &mt LEFT_SHIFT A  &mt LCTRL R  &mt LEFT_ALT S  &mt LEFT_GUI T  &kp G        &kp M      &mt RIGHT_GUI N  &mt RIGHT_ALT E  &mt RCTRL I  &kp O     &kp APOS
-&kp LSHFT  &kp Z             &kp X        &kp C           &kp D           &kp V        &kp K      &kp H            &kp COMMA        &kp DOT      &kp FSLH  &kp RSHFT
-                                          &kp LGUI        &mo 2           &kp ENTER    &kp SPACE  &mo 3            &kp BSPC
-            >;
-
-            label = "COLEMAK";
+            label = "QWERTY";
         };
 
         lower_layer {

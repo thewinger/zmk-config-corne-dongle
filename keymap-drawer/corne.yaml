@@ -1,6 +1,49 @@
 layout: {qmk_keyboard: corne_rotated, qmk_layout: LAYOUT_split_3x6_3}
 layers:
-  default:
+  colemak:
+  - ↹
+  - Q
+  - W
+  - F
+  - P
+  - B
+  - J
+  - L
+  - U
+  - Y
+  - ;
+  - DELETE
+  - {t: ESCAPE, h: Ctrl}
+  - {t: A, h: LEFT SHIFT}
+  - {t: R, h: Ctrl}
+  - {t: S, h: LEFT ALT}
+  - {t: T, h: LEFT GUI}
+  - G
+  - M
+  - {t: N, h: RIGHT GUI}
+  - {t: E, h: RIGHT ALT}
+  - {t: I, h: Ctrl}
+  - O
+  - ''''
+  - Shift
+  - Z
+  - X
+  - C
+  - D
+  - V
+  - K
+  - H
+  - ','
+  - .
+  - /
+  - Shift
+  - Gui
+  - lower
+  - ENTER
+  - ␣
+  - raise
+  - ⌫
+  qwerty:
   - ↹
   - Q
   - W
@@ -43,49 +86,6 @@ layers:
   - ␣
   - raise
   - BACKSPACE
-  colemak:
-  - ↹
-  - Q
-  - W
-  - F
-  - P
-  - B
-  - J
-  - L
-  - U
-  - Y
-  - ;
-  - DELETE
-  - Ctrl
-  - {t: A, h: LEFT SHIFT}
-  - {t: R, h: Ctrl}
-  - {t: S, h: LEFT ALT}
-  - {t: T, h: LEFT GUI}
-  - G
-  - M
-  - {t: N, h: RIGHT GUI}
-  - {t: E, h: RIGHT ALT}
-  - {t: I, h: Ctrl}
-  - O
-  - ''''
-  - Shift
-  - Z
-  - X
-  - C
-  - D
-  - V
-  - K
-  - H
-  - ','
-  - .
-  - /
-  - Shift
-  - Gui
-  - lower
-  - ENTER
-  - ␣
-  - raise
-  - ⌫
   lower:
   - ↹
   - '1'
