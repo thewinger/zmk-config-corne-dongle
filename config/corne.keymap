@@ -10,6 +10,15 @@
 #include <dt-bindings/zmk/mouse.h>
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        caps_word {
+            bindings = <&caps_word>;
+            key-positions = <24 35>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -84,6 +93,15 @@
             >;
 
             label = "SYS";
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        SYS {
+            if-layers = <2 3>;
+            then-layer = <4>;
         };
     };
 };

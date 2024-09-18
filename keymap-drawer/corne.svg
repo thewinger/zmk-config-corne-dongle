@@ -388,6 +388,14 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">⌫</text>
 </g>
+<g class="combo combopos-0">
+<path d="M420,161 l-373,0" class="combo"/>
+<path d="M420,161 l373,0" class="combo"/>
+<rect rx="6" ry="6" x="406" y="148" width="28" height="26" class="combo"/>
+<text x="420" y="161" class="combo tap">
+<tspan x="420" dy="-0.6em">Caps</tspan><tspan x="420" dy="1.2em">Word</tspan>
+</text>
+</g>
 </g>
 </g>
 <g transform="translate(40, 331)" class="layer-qwerty">
@@ -573,6 +581,14 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap"><tspan style="font-size: 67%">BACKSPACE</tspan></text>
 </g>
+<g class="combo combopos-0">
+<path d="M420,161 l-373,0" class="combo"/>
+<path d="M420,161 l373,0" class="combo"/>
+<rect rx="6" ry="6" x="406" y="148" width="28" height="26" class="combo"/>
+<text x="420" y="161" class="combo tap">
+<tspan x="420" dy="-0.6em">Caps</tspan><tspan x="420" dy="1.2em">Word</tspan>
+</text>
+</g>
 </g>
 </g>
 <g transform="translate(40, 661)" class="layer-lower">
@@ -757,6 +773,14 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">Alt</text>
 </g>
+<g class="combo combopos-0">
+<path d="M420,161 l-373,0" class="combo"/>
+<path d="M420,161 l373,0" class="combo"/>
+<rect rx="6" ry="6" x="406" y="148" width="28" height="26" class="combo"/>
+<text x="420" y="161" class="combo tap">
+<tspan x="420" dy="-0.6em">Caps</tspan><tspan x="420" dy="1.2em">Word</tspan>
+</text>
+</g>
 </g>
 </g>
 <g transform="translate(40, 992)" class="layer-raise">
@@ -935,6 +959,14 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">Alt</text>
 </g>
+<g class="combo combopos-0">
+<path d="M420,161 l-373,0" class="combo"/>
+<path d="M420,161 l373,0" class="combo"/>
+<rect rx="6" ry="6" x="406" y="148" width="28" height="26" class="combo"/>
+<text x="420" y="161" class="combo tap">
+<tspan x="420" dy="-0.6em">Caps</tspan><tspan x="420" dy="1.2em">Word</tspan>
+</text>
+</g>
 </g>
 </g>
 <g transform="translate(40, 1323)" class="layer-system">
@@ -1088,9 +1120,8 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
 <text x="0" y="0" class="key trans tap">▽</text>
 </g>
-<g transform="translate(286, 213) rotate(15.0)" class="key trans keypos-37">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<g transform="translate(286, 213) rotate(15.0)" class="key held keypos-37">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key held"/>
 </g>
 <g transform="translate(351, 224) rotate(30.0)" class="key trans keypos-38">
 <rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key trans"/>
@@ -1100,13 +1131,20 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key trans"/>
 <text x="0" y="0" class="key trans tap">▽</text>
 </g>
-<g transform="translate(554, 213) rotate(-15.0)" class="key trans keypos-40">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<g transform="translate(554, 213) rotate(-15.0)" class="key held keypos-40">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key held"/>
 </g>
 <g transform="translate(616, 205)" class="key trans keypos-41">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
 <text x="0" y="0" class="key trans tap">▽</text>
+</g>
+<g class="combo combopos-0">
+<path d="M420,161 l-373,0" class="combo"/>
+<path d="M420,161 l373,0" class="combo"/>
+<rect rx="6" ry="6" x="406" y="148" width="28" height="26" class="combo"/>
+<text x="420" y="161" class="combo tap">
+<tspan x="420" dy="-0.6em">Caps</tspan><tspan x="420" dy="1.2em">Word</tspan>
+</text>
 </g>
 </g>
 </g>
