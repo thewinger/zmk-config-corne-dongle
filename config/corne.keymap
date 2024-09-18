@@ -64,10 +64,10 @@
 
         colemak_layer {
             bindings = <
-&kp TAB           &kp Q             &kp W        &kp F           &kp P           &kp B        &kp J      &kp L            &kp U            &kp Y        &kp SEMI  &kp DELETE
-&mt LCTRL ESCAPE  &mt LEFT_SHIFT A  &mt LCTRL R  &mt LEFT_ALT S  &mt LEFT_GUI T  &kp G        &kp M      &mt RIGHT_GUI N  &mt RIGHT_ALT E  &mt RCTRL I  &kp O     &kp APOS
-&kp LSHFT         &kp Z             &kp X        &kp C           &kp D           &kp V        &kp K      &kp H            &kp COMMA        &kp DOT      &kp FSLH  &kp RSHFT
-                                                 &kp LGUI        &mo 2           &kp ENTER    &kp SPACE  &mo 3            &kp BSPC
+&kp TAB           &kp Q              &kp W         &kp F            &kp P            &kp B        &kp J      &kp L             &kp U             &kp Y         &kp SEMI  &kp DELETE
+&mt LCTRL ESCAPE  &hml LEFT_SHIFT A  &hml LCTRL R  &hml LEFT_ALT S  &hml LEFT_GUI T  &kp G        &kp M      &hmr RIGHT_GUI N  &hmr RIGHT_ALT E  &hmr RCTRL I  &kp O     &kp APOS
+&kp LSHFT         &kp Z              &kp X         &kp C            &kp D            &kp V        &kp K      &kp H             &kp COMMA         &kp DOT       &kp FSLH  &kp RSHFT
+                                                   &kp LGUI         &mo 2            &kp ENTER    &kp SPACE  &mo 3             &kp BSPC
             >;
 
             label = "COLEMAK";
