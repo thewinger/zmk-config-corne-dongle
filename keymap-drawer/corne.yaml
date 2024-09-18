@@ -38,10 +38,10 @@ layers:
   - /
   - Shift
   - Gui
-  - lower
+  - num
   - ENTER
   - ␣
-  - raise
+  - {t: ↹, h: colemak}
   - ⌫
   qwerty:
   - ↹
@@ -81,98 +81,99 @@ layers:
   - /
   - RIGHT SHIFT
   - Gui
-  - lower
+  - num
   - ENTER
   - ␣
-  - raise
+  - {t: ↹, h: colemak}
   - BACKSPACE
-  lower:
-  - ↹
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '5'
-  - SELECT
+  num:
+  - {t: ▽, type: trans}
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - J
   - '7'
   - '8'
   - '9'
+  - '-'
+  - KP DIVIDE
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Home
+  - PAGE UP
+  - {t: ▽, type: trans}
+  - '4'
+  - '5'
+  - '6'
+  - +
+  - KP ASTERISK
+  - Sft+Gui+ M
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - End
+  - PAGE DOWN
+  - K
+  - '1'
+  - '2'
+  - '3'
+  - ','
+  - .
+  - Gui
+  - {type: held}
+  - ␣
+  - ⏎
   - '0'
-  - ⌫
-  - BT CLR
-  - BT 1
-  - BT 2
-  - BT 3
-  - BT 4
-  - BT 5
+  - {t: ▽, type: trans}
+  symbols_layers:
+  - {t: ▽, type: trans}
+  - Sft+ !
+  - Sft+ @
+  - Sft+ {
+  - Sft+ }
+  - Sft+ ␣
+  - Sft+Alt+ ←
+  - Sft+Gui+ LEFT ARROW
+  - Sft+Gui+ →
+  - Sft+Alt+ →
+  - {t: ▽, type: trans}
+  - PLAY PAUSE
+  - {t: ▽, type: trans}
+  - 'Sft+ #'
+  - {t: ▽, type: trans}
+  - Sft+ (
+  - Sft+ )
+  - ␣
   - ←
   - ↓
   - ↑
   - →
+  - VOLUME DOWN
+  - VOLUME UP
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - Shift
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - Gui
-  - {type: held}
-  - ␣
-  - ⏎
-  - {t: ▽, type: trans}
-  - Alt
-  raise:
-  - ↹
-  - '!'
-  - '@'
-  - '#'
-  - $
-  - '%'
-  - ^
-  - AMPS
-  - KP MULTIPLY
-  - (
-  - )
-  - ⌫
-  - Ctrl
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '&mkp LCLK'
-  - {t: ▽, type: trans}
-  - '&mkp RCLK'
-  - '-'
-  - '='
+  - Sft+ %
+  - Sft+ ␣
   - '['
   - ']'
-  - \
-  - '`'
-  - Shift
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - _
-  - +
-  - '{'
-  - '}'
-  - '|'
-  - '~'
-  - Gui
-  - {t: ▽, type: trans}
   - ␣
-  - ⏎
-  - {type: held}
-  - Alt
+  - N
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   system:
+  - Boot
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -183,6 +184,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - Boot
+  - Reset
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -193,11 +196,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Reset
+  - {t: qwerty, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -213,7 +213,7 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
 combos:
 - p: [24, 35]
