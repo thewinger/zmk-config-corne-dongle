@@ -70,14 +70,10 @@
         ntil: uc_ntil {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&none>,
-                <&macro_tap>,
-                <&kp GRAVE>,
-                <&macro_tap>,
-                <&kp N>;
+            bindings = <&macro_tap>, <&kp LS(GRAVE)>, <&macro_tap>, <&kp N>;
 
             label = "UC_NTIL";
+            wait-ms = <0>;
         };
 
         ntild_cap: uc_ntild_cap {
@@ -88,7 +84,7 @@
                 <&macro_press>,
                 <&kp LEFT_SHIFT>,
                 <&macro_tap>,
-                <&kp GRAVE>,
+                <&kp LS(GRAVE)>,
                 <&macro_tap>,
                 <&kp N>,
                 <&macro_release>,
@@ -109,7 +105,7 @@
                                                    &kp LGUI         &mo 2            &kp ENTER    &kp SPACE  &lt 3 TAB         &kp BSPC
             >;
 
-            label = "COLEMAK";
+            label = "CLMK";
         };
 
         qwerty_layer {
@@ -123,7 +119,7 @@
 &kp TAB           &kp Q              &kp W         &kp E            &kp R            &kp T        &kp Y      &kp U             &kp I             &kp O         &kp P     &kp DELETE
 &mt LCTRL ESCAPE  &hml LEFT_SHIFT A  &hml LCTRL S  &hml LEFT_ALT D  &hml LEFT_GUI F  &kp G        &kp H      &hmr RIGHT_GUI J  &hmr RIGHT_ALT K  &hmr RCTRL L  &kp SEMI  &kp SQT
 &kp LSHFT         &kp Z              &kp X         &kp C            &kp V            &kp B        &kp N      &kp M             &kp COMMA         &kp DOT       &kp FSLH  &kp RIGHT_SHIFT
-                                                   &kp LGUI         &mo 2            &kp ENTER    &kp SPACE  &lt 0 TAB         &kp BACKSPACE
+                                                   &kp LGUI         &mo 2            &kp ENTER    &kp SPACE  &lt 3 TAB         &kp BACKSPACE
             >;
 
             label = "QWERTY";
