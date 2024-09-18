@@ -218,3 +218,7 @@ layers:
 combos:
 - p: [24, 35]
   k: Caps Word
+- p: [27, 26]
+  k: Gui+ C
+- p: [28, 27]
+  k: Gui+ V
