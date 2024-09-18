@@ -41,7 +41,7 @@ layers:
   - num
   - ENTER
   - ␣
-  - {t: ↹, h: colemak}
+  - {t: ↹, h: symbols_layers}
   - ⌫
   qwerty:
   - ↹
@@ -135,7 +135,7 @@ layers:
   - Sft+ @
   - Sft+ {
   - Sft+ }
-  - Sft+ ␣
+  - '"'
   - Sft+Alt+ ←
   - Sft+Gui+ LEFT ARROW
   - Sft+Gui+ →
@@ -144,10 +144,10 @@ layers:
   - PLAY PAUSE
   - {t: ▽, type: trans}
   - 'Sft+ #'
-  - {t: ▽, type: trans}
+  - Alt+Sft+ 2
   - Sft+ (
   - Sft+ )
-  - ␣
+  - ''''
   - ←
   - ↓
   - ↑
@@ -156,11 +156,11 @@ layers:
   - VOLUME UP
   - {t: ▽, type: trans}
   - Sft+ %
-  - Sft+ ␣
+  - Sft+ `
   - '['
   - ']'
-  - ␣
-  - N
+  - '`'
+  - {t: '&ntil', s: '&ntild_cap'}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -170,7 +170,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   system:
   - Boot
@@ -213,7 +213,7 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
 combos:
 - p: [24, 35]
