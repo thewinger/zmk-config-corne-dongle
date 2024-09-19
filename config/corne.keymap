@@ -80,7 +80,6 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&none>,
                 <&macro_press>,
                 <&kp LEFT_SHIFT>,
                 <&macro_tap>,
@@ -91,6 +90,27 @@
                 <&kp LEFT_SHIFT>;
 
             label = "UC_NTILD_CAP";
+        };
+
+        dir_dquot: dir_dquot {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DQT>;
+            label = "DIR_DQUOT";
+        };
+
+        dir_squot: dir_squot {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SQT>;
+            label = "DIR_SQUOT";
+        };
+
+        dir_btck: dir_btck {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE>;
+            label = "DIR_BTCK";
         };
     };
 
@@ -133,10 +153,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans         &kp F1  &kp F2  &kp F3    &kp F4    &kp F5           &kp J    &kp N7        &kp N8        &kp N9        &kp MINUS  &kp KP_DIVIDE
-&trans         &trans  &trans  &trans    &kp HOME  &kp PAGE_UP      &trans   &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PLUS   &kp KP_ASTERISK
-&kp LS(LG(M))  &trans  &trans  &trans    &kp END   &kp PAGE_DOWN    &kp K    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp COMMA  &kp DOT
-                               &kp LGUI  &trans    &kp SPACE        &kp RET  &kp N0        &trans
+&trans         &kp F1  &kp F2  &kp F3    &kp F4    &kp F5           &kp UP_ARROW  &kp N7        &kp N8        &kp N9        &kp MINUS  &kp KP_DIVIDE
+&trans         &trans  &trans  &trans    &kp HOME  &kp PAGE_UP      &trans        &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PLUS   &kp KP_ASTERISK
+&kp LS(LG(M))  &trans  &trans  &trans    &kp END   &kp PAGE_DOWN    &kp DOWN      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp COMMA  &kp DOT
+                               &kp LGUI  &trans    &kp SPACE        &kp RET       &kp N0        &trans
             >;
 
             label = "NUM";
@@ -144,10 +164,10 @@
 
         symbols_layers {
             bindings = <
-&trans  &kp LS(EXCL)   &kp LS(AT)            &kp LS(LBRC)  &kp LS(RBRC)  &kp DOUBLE_QUOTES    &kp LS(LA(LEFT))  &kp LS(LG(LEFT_ARROW))  &kp LS(LG(RIGHT))  &kp LS(LA(RIGHT))  &trans             &kp C_PLAY_PAUSE
-&trans  &kp LS(POUND)  &kp LA(LS(NUMBER_2))  &kp LS(LPAR)  &kp LS(RPAR)  &kp SINGLE_QUOTE     &kp LEFT          &kp DOWN                &kp UP             &kp RIGHT          &kp C_VOLUME_DOWN  &kp C_VOLUME_UP
-&trans  &kp LS(PRCNT)  &kp LS(GRAVE)         &kp LBKT      &kp RBKT      &kp GRAVE            &ntild            &trans                  &trans             &trans             &trans             &trans
-                                             &trans        &trans        &trans               &trans            &trans                  &trans
+&trans  &kp LS(EXCL)   &kp LS(AT)            &kp LS(LBRC)  &kp LS(RBRC)  &dir_dquot    &kp LS(LA(LEFT))  &kp LS(LG(LEFT_ARROW))  &kp LS(LG(RIGHT))  &kp LS(LA(RIGHT))  &trans             &kp C_PLAY_PAUSE
+&trans  &kp LS(POUND)  &kp LA(LS(NUMBER_2))  &kp LS(LPAR)  &kp LS(RPAR)  &dir_squot    &kp LEFT          &kp DOWN                &kp UP             &kp RIGHT          &kp C_VOLUME_DOWN  &kp C_VOLUME_UP
+&trans  &kp LS(PRCNT)  &kp LS(GRAVE)         &kp LBKT      &kp RBKT      &dir_btck     &ntild            &trans                  &trans             &trans             &trans             &trans
+                                             &trans        &trans        &trans        &trans            &trans                  &trans
             >;
 
             label = "SYM";

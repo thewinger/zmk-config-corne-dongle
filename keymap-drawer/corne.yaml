@@ -93,7 +93,7 @@ layers:
   - F3
   - F4
   - F5
-  - J
+  - UP ARROW
   - '7'
   - '8'
   - '9'
@@ -117,7 +117,7 @@ layers:
   - {t: ▽, type: trans}
   - End
   - PAGE DOWN
-  - K
+  - ↓
   - '1'
   - '2'
   - '3'
@@ -135,7 +135,7 @@ layers:
   - Sft+ @
   - Sft+ {
   - Sft+ }
-  - '"'
+  - '&dir_dquot'
   - Sft+Alt+ ←
   - Sft+Gui+ LEFT ARROW
   - Sft+Gui+ →
@@ -147,7 +147,7 @@ layers:
   - Alt+Sft+ 2
   - Sft+ (
   - Sft+ )
-  - ''''
+  - '&dir_squot'
   - ←
   - ↓
   - ↑
@@ -159,7 +159,7 @@ layers:
   - Sft+ `
   - '['
   - ']'
-  - '`'
+  - '&dir_btck'
   - {t: '&ntil', s: '&ntild_cap'}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
