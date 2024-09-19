@@ -172,5 +172,10 @@
             if-layers = <2 3>;
             then-layer = <4>;
         };
+
+        SYS_REV {
+            if-layers = <3 2>;
+            then-layer = <4>;
+        };
     };
 };
