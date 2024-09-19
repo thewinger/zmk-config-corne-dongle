@@ -25,9 +25,19 @@
             bindings = <&kp LG(V)>;
             key-positions = <28 27>;
         };
-    };
+    };  
+
+
+
 
     behaviors {
+as_ht: autoshift_hold_tap {
+      compatible = "zmk,behavior-hold-tap";
+      label = "AUTOSHIFT_HOLD_TAP";
+      #binding-cells = <2>;
+      tapping-term-ms = <200>;
+      bindings = <&shifted>, <&kp>;
+    };
         hmr: hmr {
             compatible = "zmk,behavior-hold-tap";
             label = "HMR";
@@ -67,6 +77,31 @@
     };
 
     macros {
+shifted: macro_shifted_kp {
+      #binding-cells = <1>;
+      label = "MACRO_SHIFTED_KP";
+      compatible = "zmk,behavior-macro-one-param";
+      bindings =
+        <&macro_press &kp LSHFT>,
+        <&macro_param_1to1 &macro_tap &kp MACRO_PLACEHOLDER>,
+        <&macro_release &kp LSHFT>;
+    };
+
+    as: autoshift {
+      compatible = "zmk,behavior-macro-one-param";
+      #binding-cells = <1>;
+      label = "AUTOSHIFT_KP";
+      bindings =
+        <&macro_press>,
+        <&macro_param_1to1>,
+        <&macro_param_1to2>,
+        <&as_ht MACRO_PLACEHOLDER MACRO_PLACEHOLDER>,
+        <&macro_pause_for_release>,
+        <&macro_release>,
+        <&macro_param_1to1>,
+        <&macro_param_1to2>,
+        <&as_ht MACRO_PLACEHOLDER MACRO_PLACEHOLDER>;
+    };
         ntil: uc_ntil {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -153,9 +188,9 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans         &kp F1  &kp F2  &kp F3    &kp F4    &kp F5           &kp UP_ARROW  &kp N7        &kp N8        &kp N9        &kp MINUS  &kp KP_DIVIDE
-&trans         &trans  &trans  &trans    &kp HOME  &kp PAGE_UP      &trans        &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PLUS   &kp KP_ASTERISK
-&kp LS(LG(M))  &trans  &trans  &trans    &kp END   &kp PAGE_DOWN    &kp DOWN      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp COMMA  &kp DOT
+&trans         &kp F1  &kp F2  &kp F3    &kp F4    &kp F5           &kp UP_ARROW  &as N7        &as N8        &as N9        &kp MINUS  &kp KP_DIVIDE
+&trans         &trans  &trans  &trans    &kp HOME  &kp PAGE_UP      &trans        &as N4  &as N5        &as N6  &kp PLUS   &kp KP_ASTERISK
+&kp LS(LG(M))  &trans  &trans  &trans    &kp END   &kp PAGE_DOWN    &kp DOWN      &as N1  &as N2  &as N3  &kp COMMA  &kp DOT
                                &kp LGUI  &trans    &kp SPACE        &kp RET       &kp N0        &trans
             >;
 
