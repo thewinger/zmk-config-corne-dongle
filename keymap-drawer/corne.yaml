@@ -41,7 +41,7 @@ layers:
   - num
   - ENTER
   - ␣
-  - {t: ↹, h: symbols_layers}
+  - symbols_layers
   - ⌫
   qwerty:
   - ↹
