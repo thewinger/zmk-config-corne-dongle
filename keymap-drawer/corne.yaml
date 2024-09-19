@@ -1,48 +1,5 @@
 layout: {qmk_keyboard: corne_rotated, qmk_layout: LAYOUT_split_3x6_3}
 layers:
-  colemak:
-  - ↹
-  - Q
-  - W
-  - F
-  - P
-  - B
-  - J
-  - L
-  - U
-  - Y
-  - ;
-  - DELETE
-  - {t: ESCAPE, h: Ctrl}
-  - {t: A, h: LEFT SHIFT}
-  - {t: R, h: Ctrl}
-  - {t: S, h: LEFT ALT}
-  - {t: T, h: LEFT GUI}
-  - G
-  - M
-  - {t: N, h: RIGHT GUI}
-  - {t: E, h: RIGHT ALT}
-  - {t: I, h: Ctrl}
-  - O
-  - ''''
-  - Shift
-  - Z
-  - X
-  - C
-  - D
-  - V
-  - K
-  - H
-  - ','
-  - .
-  - /
-  - Shift
-  - Gui
-  - ENTER
-  - num
-  - symbols_layers
-  - ␣
-  - ⌫
   qwerty:
   - ↹
   - Q
@@ -81,11 +38,54 @@ layers:
   - /
   - RIGHT SHIFT
   - Gui
-  - num
   - ENTER
+  - num
+  - symbols_layers
   - ␣
-  - {t: ↹, h: symbols_layers}
   - BACKSPACE
+  colemak:
+  - {t: ▽, type: trans}
+  - Q
+  - W
+  - F
+  - P
+  - B
+  - J
+  - L
+  - U
+  - Y
+  - ;
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: A, h: LEFT SHIFT}
+  - {t: R, h: Ctrl}
+  - {t: S, h: LEFT ALT}
+  - {t: T, h: LEFT GUI}
+  - G
+  - M
+  - {t: N, h: RIGHT GUI}
+  - {t: E, h: RIGHT ALT}
+  - {t: I, h: Ctrl}
+  - O
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Z
+  - X
+  - C
+  - D
+  - V
+  - K
+  - H
+  - ','
+  - .
+  - /
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   num:
   - {t: ▽, type: trans}
   - F1

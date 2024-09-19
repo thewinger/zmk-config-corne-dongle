@@ -97,17 +97,6 @@
     keymap {
         compatible = "zmk,keymap";
 
-        colemak_layer {
-            bindings = <
-&kp TAB           &kp Q              &kp W         &kp F            &kp P            &kp B    &kp J  &kp L             &kp U             &kp Y         &kp SEMI  &kp DELETE
-&mt LCTRL ESCAPE  &hml LEFT_SHIFT A  &hml LCTRL R  &hml LEFT_ALT S  &hml LEFT_GUI T  &kp G    &kp M  &hmr RIGHT_GUI N  &hmr RIGHT_ALT E  &hmr RCTRL I  &kp O     &kp APOS
-&kp LSHFT         &kp Z              &kp X         &kp C            &kp D            &kp V    &kp K  &kp H             &kp COMMA         &kp DOT       &kp FSLH  &kp RSHFT
-                                                   &kp LGUI         &kp ENTER        &mo 2    &mo 3  &kp SPACE         &kp BSPC
-            >;
-
-            label = "CLMK";
-        };
-
         qwerty_layer {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
@@ -116,13 +105,24 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB           &kp Q              &kp W         &kp E            &kp R            &kp T        &kp Y      &kp U             &kp I             &kp O         &kp P     &kp DELETE
-&mt LCTRL ESCAPE  &hml LEFT_SHIFT A  &hml LCTRL S  &hml LEFT_ALT D  &hml LEFT_GUI F  &kp G        &kp H      &hmr RIGHT_GUI J  &hmr RIGHT_ALT K  &hmr RCTRL L  &kp SEMI  &kp SQT
-&kp LSHFT         &kp Z              &kp X         &kp C            &kp V            &kp B        &kp N      &kp M             &kp COMMA         &kp DOT       &kp FSLH  &kp RIGHT_SHIFT
-                                                   &kp LGUI         &mo 2            &kp ENTER    &kp SPACE  &lt 3 TAB         &kp BACKSPACE
+&kp TAB           &kp Q              &kp W         &kp E            &kp R            &kp T    &kp Y  &kp U             &kp I             &kp O         &kp P     &kp DELETE
+&mt LCTRL ESCAPE  &hml LEFT_SHIFT A  &hml LCTRL S  &hml LEFT_ALT D  &hml LEFT_GUI F  &kp G    &kp H  &hmr RIGHT_GUI J  &hmr RIGHT_ALT K  &hmr RCTRL L  &kp SEMI  &kp SQT
+&kp LSHFT         &kp Z              &kp X         &kp C            &kp V            &kp B    &kp N  &kp M             &kp COMMA         &kp DOT       &kp FSLH  &kp RIGHT_SHIFT
+                                                   &kp LGUI         &kp ENTER        &mo 2    &mo 3  &kp SPACE         &kp BACKSPACE
             >;
 
             label = "QWERTY";
+        };
+
+        colemak_layer {
+            bindings = <
+&trans  &kp Q              &kp W         &kp F            &kp P            &kp B     &kp J   &kp L             &kp U             &kp Y         &kp SEMI  &trans
+&trans  &hml LEFT_SHIFT A  &hml LCTRL R  &hml LEFT_ALT S  &hml LEFT_GUI T  &kp G     &kp M   &hmr RIGHT_GUI N  &hmr RIGHT_ALT E  &hmr RCTRL I  &kp O     &trans
+&trans  &kp Z              &kp X         &kp C            &kp D            &kp V     &kp K   &kp H             &kp COMMA         &kp DOT       &kp FSLH  &trans
+                                         &trans           &trans           &trans    &trans  &trans            &trans
+            >;
+
+            label = "CLMK";
         };
 
         num_layer {
@@ -157,7 +157,7 @@
             bindings = <
 &bootloader  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &bootloader
 &sys_reset   &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &sys_reset
-&tog 1       &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&tog 0       &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                              &trans  &trans  &trans    &trans  &trans  &trans
             >;
 
