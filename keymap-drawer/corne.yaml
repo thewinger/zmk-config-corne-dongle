@@ -38,10 +38,10 @@ layers:
   - /
   - Shift
   - Gui
-  - num
   - ENTER
-  - ␣
+  - num
   - symbols_layers
+  - ␣
   - ⌫
   qwerty:
   - ↹
@@ -124,8 +124,8 @@ layers:
   - ','
   - .
   - Gui
-  - {type: held}
-  - ␣
+  - {t: ▽, type: trans}
+  - {t: ␣, type: held}
   - ⏎
   - '0'
   - {t: ▽, type: trans}
@@ -169,8 +169,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   system:
   - Boot
@@ -210,10 +210,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
+  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
 combos:
 - p: [24, 35]
