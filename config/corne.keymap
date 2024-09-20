@@ -208,10 +208,10 @@
 
         system_layer {
             bindings = <
-&bootloader  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &bootloader
-&sys_reset   &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &sys_reset
-&tog 1       &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                             &trans  &trans  &trans    &trans  &trans  &trans
+&bootloader  &trans  &trans  &trans  &kp LC(LS(LG(N4)))  &trans    &trans  &trans  &trans  &trans  &trans  &bootloader
+&sys_reset   &trans  &trans  &trans  &trans              &trans    &trans  &trans  &trans  &trans  &trans  &sys_reset
+&tog 1       &trans  &trans  &trans  &trans              &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                             &trans  &trans              &trans    &trans  &trans  &trans
             >;
 
             label = "SYS";
