@@ -12,7 +12,7 @@ layers:
   - I
   - O
   - P
-  - DELETE
+  - Hyper+ M
   - {t: ESCAPE, h: Ctrl}
   - {t: A, h: LEFT SHIFT}
   - {t: S, h: Ctrl}
@@ -39,10 +39,10 @@ layers:
   - RIGHT SHIFT
   - Gui
   - ENTER
-  - num
-  - symbols_layers
-  - ␣
+  - {t: ↹, h: num}
+  - {t: ␣, h: symbols_layers}
   - BACKSPACE
+  - ⌦
   colemak:
   - {t: ▽, type: trans}
   - Q
@@ -100,10 +100,10 @@ layers:
   - '-'
   - KP DIVIDE
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - Home
+  - LEFT SHIFT
+  - Ctrl
+  - LEFT ALT
+  - LEFT GUI
   - PAGE UP
   - {t: ▽, type: trans}
   - '&as N4'
@@ -111,10 +111,10 @@ layers:
   - '&as N6'
   - +
   - KP ASTERISK
-  - Sft+Gui+ M
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - Home
   - End
   - PAGE DOWN
   - ↓
@@ -123,12 +123,12 @@ layers:
   - '&as N3'
   - ','
   - .
-  - Gui
   - {t: ▽, type: trans}
-  - {t: ␣, type: held}
-  - ⏎
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - '0'
-  - {t: ▽, type: trans}
   symbols_layers:
   - {t: ▽, type: trans}
   - Sft+ !
