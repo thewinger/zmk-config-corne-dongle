@@ -197,10 +197,10 @@
 
         symbols_layers {
             bindings = <
-&trans  &kp LS(EXCL)   &kp LS(AT)            &kp LS(LBRC)  &kp LS(RBRC)  &dir_dquot    &kp LS(LA(LEFT))  &kp LS(LG(LEFT_ARROW))  &kp LS(LG(RIGHT))  &kp LS(LA(RIGHT))  &trans             &kp C_PLAY_PAUSE
-&trans  &kp LS(POUND)  &kp LA(LS(NUMBER_2))  &kp LS(LPAR)  &kp LS(RPAR)  &dir_squot    &kp LEFT          &kp DOWN                &kp UP             &kp RIGHT          &kp C_VOLUME_DOWN  &kp C_VOLUME_UP
-&trans  &kp LS(PRCNT)  &kp LS(GRAVE)         &kp LBKT      &kp RBKT      &dir_btck     &ntild            &trans                  &trans             &trans             &trans             &trans
-                                             &trans        &trans        &trans        &trans            &trans                  &trans
+&trans  &kp LS(EXCL)       &kp LS(AT)            &kp LS(LBRC)  &kp LS(RBRC)  &dir_dquot    &kp LS(LA(LEFT))  &kp LS(LG(LEFT_ARROW))  &kp LS(LG(RIGHT))  &kp LS(LA(RIGHT))  &trans             &kp C_PLAY_PAUSE
+&trans  &kp LS(BACKSLASH)  &kp LA(LS(NUMBER_2))  &kp LS(LPAR)  &kp LS(RPAR)  &dir_squot    &kp LEFT          &kp DOWN                &kp UP             &kp RIGHT          &kp C_VOLUME_DOWN  &kp C_VOLUME_UP
+&trans  &kp LS(PRCNT)      &kp LS(GRAVE)         &kp LBKT      &kp RBKT      &dir_btck     &ntild            &trans                  &trans             &trans             &trans             &trans
+                                                 &trans        &trans        &trans        &trans            &trans                  &trans
             >;
 
             label = "SYM";
