@@ -128,21 +128,21 @@
         dir_dquot: dir_dquot {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp DQT>;
+            bindings = <&kp DQT &kp SPACE>;
             label = "DIR_DQUOT";
         };
 
         dir_squot: dir_squot {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp SQT>;
+            bindings = <&kp SQT &kp SPACE>;
             label = "DIR_SQUOT";
         };
 
         dir_btck: dir_btck {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp GRAVE>;
+            bindings = <&kp GRAVE &kp SPACE>;
             label = "DIR_BTCK";
         };
     };
