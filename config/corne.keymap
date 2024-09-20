@@ -187,7 +187,7 @@
 
             bindings = <
 &trans  &kp F1          &kp F2     &kp F3        &kp F4        &kp F5           &kp UP_ARROW  &as N7  &as N8  &as N9  &kp MINUS  &kp KP_DIVIDE
-&trans  &kp LEFT_SHIFT  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &kp PAGE_UP      &trans        &as N4  &as N5  &as N6  &kp PLUS   &kp KP_ASTERISK
+&trans  &kp LEFT_SHIFT  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &kp PAGE_UP      &kp KP_EQUAL  &as N4  &as N5  &as N6  &kp PLUS   &kp KP_ASTERISK
 &trans  &trans          &trans     &kp HOME      &kp END       &kp PAGE_DOWN    &kp DOWN      &as N1  &as N2  &as N3  &kp COMMA  &kp DOT
                                    &trans        &trans        &trans           &trans        &trans  &kp N0
             >;

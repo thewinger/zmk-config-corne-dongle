@@ -105,7 +105,7 @@ layers:
   - LEFT ALT
   - LEFT GUI
   - PAGE UP
-  - {t: ▽, type: trans}
+  - KP EQUAL
   - '&as N4'
   - '&as N5'
   - '&as N6'
