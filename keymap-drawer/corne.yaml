@@ -40,8 +40,8 @@ layers:
   - Gui
   - ENTER
   - {t: ↹, h: num}
-  - {t: ␣, h: symbols_layers}
-  - BACKSPACE
+  - {t: BACKSPACE, h: symbols_layers}
+  - ␣
   - ⌦
   colemak:
   - {t: ▽, type: trans}
