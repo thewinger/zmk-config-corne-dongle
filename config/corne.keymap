@@ -25,6 +25,11 @@
             bindings = <&kp LG(V)>;
             key-positions = <28 27>;
         };
+
+        cut {
+            bindings = <&kp LG(X)>;
+            key-positions = <25 26>;
+        };
     };
 
     behaviors {

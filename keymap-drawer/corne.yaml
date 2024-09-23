@@ -222,3 +222,5 @@ combos:
   k: Gui+ C
 - p: [28, 27]
   k: Gui+ V
+- p: [25, 26]
+  k: Gui+ X
