@@ -53,8 +53,7 @@
 # cmake-args: -DKEYMAP_FILE=../../config/other-corne.keymap -DCONFIG_ZMK_KEYBOARD_NAME=\"other-corne\" -DEXTRA_CONF_FILE=../../config/other-corne.conf
 ---
 include:
-
-    # nice
+  # nice
   - board: nice_nano_v2
     shield: corne_right
     artifact-name: nice_corne_right
@@ -69,8 +68,7 @@ include:
     shield: corne_dongle_pro_micro dongle_display
     cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"Nice_Dongle_O\"
     artifact-name: nice_corne_dongle_pro_micro_dongle_display
-    snippet: zmk-usb-logging
-
+    snippet: zmk-usb-logging studio-rpc-usb-uart
 
     # settings_reset
   - board: nice_nano_v2
