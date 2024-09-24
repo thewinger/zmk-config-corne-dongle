@@ -246,7 +246,7 @@ layers:
   - S
   - D
   - F
-  - ''
+  - B
   - ''
   - ''
   - ''
@@ -256,7 +256,7 @@ layers:
   - ␣
   - ␣
   - ''
-  - ''
+  - Esc
   - RIGHT GUI
 combos:
 - p: [24, 35]
