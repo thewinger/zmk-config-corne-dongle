@@ -66,7 +66,7 @@ layers:
   - {t: N, h: RIGHT GUI}
   - {t: E, h: RIGHT ALT}
   - {t: I, h: Ctrl}
-  - O
+  - {t: O, h: RIGHT SHIFT}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Z

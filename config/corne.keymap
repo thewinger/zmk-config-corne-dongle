@@ -174,9 +174,9 @@
 
         colemak_layer {
             bindings = <
-&trans  &kp Q              &kp W         &kp F            &kp P            &kp B     &kp J   &kp L             &kp U             &kp Y         &kp SEMI  &trans
-&trans  &hml LEFT_SHIFT A  &hml LCTRL R  &hml LEFT_ALT S  &hml LEFT_GUI T  &kp G     &kp M   &hmr RIGHT_GUI N  &hmr RIGHT_ALT E  &hmr RCTRL I  &kp O     &trans
-&trans  &kp Z              &kp X         &kp C            &kp D            &kp V     &kp K   &kp H             &kp COMMA         &kp DOT       &kp FSLH  &trans
+&trans  &kp Q              &kp W         &kp F            &kp P            &kp B     &kp J   &kp L             &kp U             &kp Y         &kp SEMI            &trans
+&trans  &hml LEFT_SHIFT A  &hml LCTRL R  &hml LEFT_ALT S  &hml LEFT_GUI T  &kp G     &kp M   &hmr RIGHT_GUI N  &hmr RIGHT_ALT E  &hmr RCTRL I  &hmr RIGHT_SHIFT O  &trans
+&trans  &kp Z              &kp X         &kp C            &kp D            &kp V     &kp K   &kp H             &kp COMMA         &kp DOT       &kp FSLH            &trans
                                          &trans           &trans           &trans    &trans  &trans            &trans
             >;
 
