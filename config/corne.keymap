@@ -150,6 +150,13 @@
             bindings = <&kp GRAVE &kp SPACE>;
             label = "DIR_BTCK";
         };
+
+        dongle_boot: dongle_boot {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bootloader>;
+            label = "DONGLE_BOOT";
+        };
     };
 
     keymap {
@@ -215,11 +222,22 @@
             bindings = <
 &bootloader  &trans  &trans  &trans  &kp LC(LS(LG(N4)))  &trans    &trans  &trans  &trans  &trans  &trans  &bootloader
 &sys_reset   &trans  &trans  &trans  &trans              &trans    &trans  &trans  &trans  &trans  &trans  &sys_reset
-&tog 1       &trans  &trans  &trans  &trans              &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&tog 1       &trans  &trans  &trans  &trans              &trans    &trans  &trans  &trans  &trans  &trans  &tog 5
                              &trans  &trans              &trans    &trans  &trans  &trans
             >;
 
             label = "SYS";
+        };
+
+        GAMING_LAYER {
+            bindings = <
+&kp M  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp N4     &kp N5       &none  &none  &none          &none  &none  &none
+&kp Z  &kp TAB       &kp Q         &kp W         &kp E      &kp R        &none  &none  &none          &none  &none  &none
+&kp X  &kp LSHIFT    &kp A         &kp S         &kp D      &kp F        &none  &none  &none          &none  &none  &tog 5
+                                   &kp LCTRL     &kp SPACE  &kp SPACE    &none  &none  &kp RIGHT_GUI
+            >;
+
+            label = "game";
         };
     };
 
