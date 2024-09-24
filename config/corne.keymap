@@ -237,7 +237,7 @@
                                    &kp LCTRL     &kp SPACE  &kp SPACE    &none  &none  &kp RIGHT_GUI
             >;
 
-            label = "game";
+            label = "GAME";
         };
     };
 
