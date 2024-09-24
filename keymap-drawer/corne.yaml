@@ -23,7 +23,7 @@ layers:
   - {t: J, h: RIGHT GUI}
   - {t: K, h: RIGHT ALT}
   - {t: L, h: Ctrl}
-  - ;
+  - {t: ;, h: RIGHT SHIFT}
   - ''''
   - Shift
   - Z
