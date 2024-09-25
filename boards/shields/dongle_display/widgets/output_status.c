@@ -37,7 +37,7 @@ const lv_img_dsc_t sym_num[] = {
     &sym_2,
     &sym_3,
     &sym_4,
-    &sym_5,
+    &sym_5
 };
 
 enum output_symbol {
