@@ -26,12 +26,12 @@ struct peripheral_battery_state {
     uint8_t source;
     uint8_t level;
 };
-    
+
 static lv_color_t battery_image_buffer[ZMK_SPLIT_BLE_PERIPHERAL_COUNT][5 * 8];
 
 static void draw_battery(lv_obj_t *canvas, uint8_t level) {
     lv_canvas_fill_bg(canvas, lv_color_black(), LV_OPA_COVER);
-    
+
     lv_draw_rect_dsc_t rect_fill_dsc;
     lv_draw_rect_dsc_init(&rect_fill_dsc);
     rect_fill_dsc.bg_color = lv_color_white();
@@ -60,7 +60,7 @@ static void set_battery_symbol(lv_obj_t *widget, struct peripheral_battery_state
 
     draw_battery(symbol, state.level);
     lv_label_set_text_fmt(label, "%3u%%", state.level);
-    
+
     if (state.level > 0) {
         lv_obj_clear_flag(symbol, LV_OBJ_FLAG_HIDDEN);
         lv_obj_clear_flag(label, LV_OBJ_FLAG_HIDDEN);
@@ -99,8 +99,13 @@ int zmk_widget_peripheral_battery_status_init(struct zmk_widget_peripheral_batte
 
         lv_canvas_set_buffer(image_canvas, battery_image_buffer[i], 5, 8, LV_IMG_CF_TRUE_COLOR);
 
-        lv_obj_align(image_canvas, LV_ALIGN_TOP_RIGHT, 0, i * 10);
-        lv_obj_align(battery_label, LV_ALIGN_TOP_RIGHT, -7, i * 10);
+       if (i == 0) {
+            lv_obj_align(image_canvas, LV_ALIGN_TOP_LEFT, 0, 0);
+            lv_obj_align(battery_label, LV_ALIGN_TOP_LEFT, 7, 0);
+        } else {
+            lv_obj_align(image_canvas, LV_ALIGN_TOP_RIGHT, 0, 0);
+            lv_obj_align(battery_label, LV_ALIGN_TOP_RIGHT, -7, 0);
+        }
     }
 
     sys_slist_append(&widgets, &widget->node);
