@@ -38,10 +38,10 @@ layers:
   - /
   - RIGHT SHIFT
   - Gui
-  - ENTER
+  - {t: ENTER, h: num}
   - {t: ↹, h: num}
+  - {t: ␣, h: symbols_layers}
   - {t: BACKSPACE, h: symbols_layers}
-  - ␣
   - ⌦
   colemak:
   - {t: ▽, type: trans}
@@ -124,8 +124,8 @@ layers:
   - ','
   - .
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '0'
@@ -210,8 +210,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: GAMING_LAYER, h: toggle}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
