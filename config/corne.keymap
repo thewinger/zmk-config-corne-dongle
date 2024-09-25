@@ -150,6 +150,13 @@
             bindings = <&kp GRAVE &kp SPACE>;
             label = "DIR_BTCK";
         };
+
+        dongle_boot: dongle_boot {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bootloader>;
+            label = "DONGLE_BOOT";
+        };
     };
 
     keymap {
@@ -213,10 +220,10 @@
 
         system_layer {
             bindings = <
-&bootloader  &trans  &trans  &trans  &kp LC(LS(LG(N4)))  &trans    &trans  &trans  &trans  &trans  &trans  &bootloader
-&sys_reset   &trans  &trans  &trans  &trans              &trans    &trans  &trans  &trans  &trans  &trans  &sys_reset
-&tog 1       &trans  &trans  &trans  &trans              &trans    &trans  &trans  &trans  &trans  &trans  &tog 5
-                             &trans  &trans              &trans    &trans  &trans  &trans
+&bootloader  &dongle_boot  &trans  &trans  &kp LC(LS(LG(N4)))  &trans    &trans  &trans  &trans  &trans  &dongle_boot  &bootloader
+&sys_reset   &trans        &trans  &trans  &trans              &trans    &trans  &trans  &trans  &trans  &trans        &sys_reset
+&tog 1       &trans        &trans  &trans  &trans              &trans    &trans  &trans  &trans  &trans  &trans        &tog 5
+                                   &trans  &trans              &trans    &trans  &trans  &trans
             >;
 
             label = "SYS";

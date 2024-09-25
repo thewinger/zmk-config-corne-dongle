@@ -174,7 +174,7 @@ layers:
   - {t: ▽, type: trans}
   system:
   - Boot
-  - {t: ▽, type: trans}
+  - '&dongle_boot'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Ctl+Sft+Gui+ 4
@@ -183,7 +183,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '&dongle_boot'
   - Boot
   - Reset
   - {t: ▽, type: trans}
