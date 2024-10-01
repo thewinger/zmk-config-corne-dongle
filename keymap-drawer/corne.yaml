@@ -1,7 +1,7 @@
 layout: {qmk_keyboard: corne_rotated, qmk_layout: LAYOUT_split_3x6_3}
 layers:
   qwerty:
-  - {t: ↹, h: Meh+ LEFT GUI}
+  - Sft+Alt+ Ctrl
   - Q
   - W
   - E
@@ -37,7 +37,7 @@ layers:
   - .
   - /
   - RIGHT SHIFT
-  - Gui
+  - ESCAPE
   - {t: ␣, h: num}
   - {t: ↹, h: num}
   - {t: ENTER, h: symbols_layers}
