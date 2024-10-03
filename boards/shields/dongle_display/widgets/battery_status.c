@@ -112,7 +112,7 @@ int zmk_widget_peripheral_battery_status_init(struct zmk_widget_peripheral_batte
 
 		if (i == 0) {
 			lv_obj_align(image_canvas, LV_ALIGN_TOP_LEFT, 1, 0);
-			lv_obj_align(battery_label, LV_ALIGN_TOP_LEFT, 4, 0);
+			lv_obj_align(battery_label, LV_ALIGN_TOP_LEFT, 0, 0);
 		} else {
 			lv_obj_align(image_canvas, LV_ALIGN_TOP_RIGHT, 0, 0);
 			lv_obj_align(battery_label, LV_ALIGN_TOP_RIGHT, -7, 0);
