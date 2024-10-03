@@ -175,7 +175,7 @@ int zmk_widget_output_status_init(struct zmk_widget_output_status *widget, lv_ob
 	lv_obj_set_size(widget->obj, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
 
 	lv_obj_t *usb = lv_img_create(widget->obj);
-	lv_obj_align(usb, LV_ALIGN_TOP_MID, 0, 4);
+	lv_obj_align(usb, LV_ALIGN_TOP_LEFT, 1, 4);
 	lv_img_set_src(usb, &sym_usb);
 
 	lv_obj_t *usb_hid_status = lv_img_create(widget->obj);
