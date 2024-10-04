@@ -28,16 +28,8 @@ static sys_slist_t widgets = SYS_SLIST_STATIC_INIT(&widgets);
 enum output_symbol {
 	output_symbol_usb,
 	output_symbol_usb_hid_status,
-	output_symbol_bt,
-	output_symbol_selection_line
+	output_symbol_bt
 };
-
-enum selection_line_state {
-	selection_line_state_usb,
-	selection_line_state_bt
-} current_selection_line_state;
-
-lv_point_t selection_line_points[] = {{-1, 0}, {12, 0}}; // will be replaced with lv_point_precise_t
 
 struct output_status_state {
 	struct zmk_endpoint_instance selected_endpoint;
@@ -57,76 +49,47 @@ static struct output_status_state get_state(const zmk_event_t *_eh)
 		.usb_is_hid_ready = zmk_usb_is_hid_ready()};
 }
 
-static void anim_x_cb(void *var, int32_t v)
-{
-	lv_obj_set_x(var, v);
-}
-
-static void anim_size_cb(void *var, int32_t v)
-{
-	selection_line_points[1].x = v;
-}
-
-static void move_object_x(void *obj, int32_t from, int32_t to)
-{
-	lv_anim_t a;
-	lv_anim_init(&a);
-	lv_anim_set_var(&a, obj);
-	lv_anim_set_time(&a, 200); // will be replaced with lv_anim_set_duration
-	lv_anim_set_exec_cb(&a, anim_x_cb);
-	lv_anim_set_path_cb(&a, lv_anim_path_overshoot);
-	lv_anim_set_values(&a, from, to);
-	lv_anim_start(&a);
-}
-
-static void change_size_object(void *obj, int32_t from, int32_t to)
-{
-	lv_anim_t a;
-	lv_anim_init(&a);
-	lv_anim_set_var(&a, obj);
-	lv_anim_set_time(&a, 200); // will be replaced with lv_anim_set_duration
-	lv_anim_set_exec_cb(&a, anim_size_cb);
-	lv_anim_set_path_cb(&a, lv_anim_path_ease_in_out);
-	lv_anim_set_values(&a, from, to);
-	lv_anim_start(&a);
-}
-
 static void set_status_symbol(lv_obj_t *widget, struct output_status_state state)
 {
 	lv_obj_t *usb = lv_obj_get_child(widget, output_symbol_usb);
 	lv_obj_t *usb_hid_status = lv_obj_get_child(widget, output_symbol_usb_hid_status);
 	lv_obj_t *bt = lv_obj_get_child(widget, output_symbol_bt);
-	lv_obj_t *selection_line = lv_obj_get_child(widget, output_symbol_selection_line);
 
 	switch (state.selected_endpoint.transport) {
 	case ZMK_TRANSPORT_USB:
-		if (current_selection_line_state != selection_line_state_usb) {
-			move_object_x(selection_line, lv_obj_get_x(bt) - 1, lv_obj_get_x(usb) - 1);
-			change_size_object(selection_line, 30, 30);
-			current_selection_line_state = selection_line_state_usb;
+		lv_obj_clear_flag(usb, LV_OBJ_FLAG_HIDDEN);
+		lv_obj_add_flag(bt, LV_OBJ_FLAG_HIDDEN);
+		lv_label_set_text(usb, USB_LABEL);
+		if (state.usb_is_hid_ready) {
+			lv_obj_clear_flag(usb_hid_status, LV_OBJ_FLAG_HIDDEN);
+		} else {
+			lv_obj_add_flag(usb_hid_status, LV_OBJ_FLAG_HIDDEN);
 		}
 		break;
 	case ZMK_TRANSPORT_BLE:
-		if (current_selection_line_state != selection_line_state_bt) {
-			move_object_x(selection_line, lv_obj_get_x(usb) - 1, lv_obj_get_x(bt) - 1);
-			change_size_object(selection_line, 30, 30);
-			current_selection_line_state = selection_line_state_bt;
-		}
+		lv_obj_add_flag(usb, LV_OBJ_FLAG_HIDDEN);
+		lv_obj_add_flag(usb_hid_status, LV_OBJ_FLAG_HIDDEN);
+		lv_obj_clear_flag(bt, LV_OBJ_FLAG_HIDDEN);
+		char bt_label[10];
+		snprintf(bt_label, sizeof(bt_label), "%s%d", BT_LABEL,
+			 state.active_profile_index + 1);
+		lv_label_set_text(bt, bt_label);
 		break;
 	}
+}
 
-	lv_label_set_text(usb, USB_LABEL);
-	lv_label_set_text(bt, BT_LABEL);
+lv_label_set_text(usb, USB_LABEL);
+lv_label_set_text(bt, BT_LABEL);
 
-	char bt_label[10];
-	snprintf(bt_label, sizeof(bt_label), "%s%d", BT_LABEL, state.active_profile_index + 1);
-	lv_label_set_text(bt, bt_label);
+char bt_label[10];
+snprintf(bt_label, sizeof(bt_label), "%s%d", BT_LABEL, state.active_profile_index + 1);
+lv_label_set_text(bt, bt_label);
 
-	if (state.usb_is_hid_ready) {
-		lv_obj_clear_flag(usb_hid_status, LV_OBJ_FLAG_HIDDEN);
-	} else {
-		lv_obj_add_flag(usb_hid_status, LV_OBJ_FLAG_HIDDEN);
-	}
+if (state.usb_is_hid_ready) {
+	lv_obj_clear_flag(usb_hid_status, LV_OBJ_FLAG_HIDDEN);
+} else {
+	lv_obj_add_flag(usb_hid_status, LV_OBJ_FLAG_HIDDEN);
+}
 }
 
 static void output_status_update_cb(struct output_status_state state)
@@ -150,7 +113,7 @@ int zmk_widget_output_status_init(struct zmk_widget_output_status *widget, lv_ob
 	lv_obj_set_size(widget->obj, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
 
 	lv_obj_t *usb = lv_label_create(widget->obj);
-	lv_obj_align(usb, LV_ALIGN_TOP_LEFT, 1, 4);
+	lv_obj_align(usb, LV_ALIGN_TOP_MID, 0, 0);
 	lv_label_set_text(usb, USB_LABEL);
 
 	lv_obj_t *usb_hid_status = lv_obj_create(widget->obj);
@@ -159,18 +122,8 @@ int zmk_widget_output_status_init(struct zmk_widget_output_status *widget, lv_ob
 	lv_obj_align_to(usb_hid_status, usb, LV_ALIGN_OUT_RIGHT_MID, 2, 0);
 
 	lv_obj_t *bt = lv_label_create(widget->obj);
-	lv_obj_align_to(bt, usb, LV_ALIGN_OUT_RIGHT_MID, 10, 0);
+	lv_obj_align(bt, LV_ALIGN_TOP_MID, 0, 0);
 	lv_label_set_text(bt, BT_LABEL "1");
-
-	static lv_style_t style_line;
-	lv_style_init(&style_line);
-	lv_style_set_line_width(&style_line, 2);
-
-	lv_obj_t *selection_line;
-	selection_line = lv_line_create(widget->obj);
-	lv_line_set_points(selection_line, selection_line_points, 2);
-	lv_obj_add_style(selection_line, &style_line, 0);
-	lv_obj_align_to(selection_line, usb, LV_ALIGN_OUT_BOTTOM_LEFT, 0, 1);
 
 	sys_slist_append(&widgets, &widget->node);
 
