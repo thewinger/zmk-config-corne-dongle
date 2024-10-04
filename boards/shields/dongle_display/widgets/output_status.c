@@ -76,20 +76,19 @@ static void set_status_symbol(lv_obj_t *widget, struct output_status_state state
 		lv_label_set_text(bt, bt_label);
 		break;
 	}
-}
 
-lv_label_set_text(usb, USB_LABEL);
-lv_label_set_text(bt, BT_LABEL);
+	lv_label_set_text(usb, USB_LABEL);
+	lv_label_set_text(bt, BT_LABEL);
 
-char bt_label[10];
-snprintf(bt_label, sizeof(bt_label), "%s%d", BT_LABEL, state.active_profile_index + 1);
-lv_label_set_text(bt, bt_label);
+	char bt_label[10];
+	snprintf(bt_label, sizeof(bt_label), "%s%d", BT_LABEL, state.active_profile_index + 1);
+	lv_label_set_text(bt, bt_label);
 
-if (state.usb_is_hid_ready) {
-	lv_obj_clear_flag(usb_hid_status, LV_OBJ_FLAG_HIDDEN);
-} else {
-	lv_obj_add_flag(usb_hid_status, LV_OBJ_FLAG_HIDDEN);
-}
+	if (state.usb_is_hid_ready) {
+		lv_obj_clear_flag(usb_hid_status, LV_OBJ_FLAG_HIDDEN);
+	} else {
+		lv_obj_add_flag(usb_hid_status, LV_OBJ_FLAG_HIDDEN);
+	}
 }
 
 static void output_status_update_cb(struct output_status_state state)
