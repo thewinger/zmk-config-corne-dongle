@@ -47,13 +47,6 @@ struct output_status_state {
 	bool usb_is_hid_ready;
 };
 
-enum output_symbol {
-	output_symbol_usb,
-	output_symbol_usb_hid_status,
-	output_symbol_bt,
-	output_symbol_selection_line
-};
-
 static struct output_status_state get_state(const zmk_event_t *_eh)
 {
 	return (struct output_status_state){
