@@ -157,6 +157,13 @@
             bindings = <&bootloader>;
             label = "DONGLE_BOOT";
         };
+
+        dir_tilde: dir_tilde {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp TILDE &kp SPACE>;
+            label = "DIR_TILDE";
+        };
     };
 
     keymap {
@@ -211,7 +218,7 @@
             bindings = <
 &trans  &kp LS(EXCL)   &kp LS(AT)            &kp LS(LBRC)  &kp LS(RBRC)  &dir_dquot    &kp LS(LA(LEFT))  &kp LS(LG(LEFT_ARROW))  &kp LS(LG(RIGHT))  &kp LS(LA(RIGHT))  &trans             &kp C_PLAY_PAUSE
 &trans  &kp BACKSLASH  &kp LA(LS(NUMBER_2))  &kp LS(LPAR)  &kp LS(RPAR)  &dir_squot    &kp LEFT          &kp DOWN                &kp UP             &kp RIGHT          &kp C_VOLUME_DOWN  &kp C_VOLUME_UP
-&trans  &kp LS(PRCNT)  &kp LS(GRAVE)         &kp LBKT      &kp RBKT      &dir_btck     &ntild            &trans                  &trans             &trans             &trans             &trans
+&trans  &kp LS(PRCNT)  &dir_tilde            &kp LBKT      &kp RBKT      &dir_btck     &ntild            &trans                  &trans             &trans             &trans             &trans
                                              &trans        &trans        &trans        &trans            &trans                  &trans
             >;
 

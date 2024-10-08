@@ -156,7 +156,7 @@ layers:
   - VOLUME UP
   - {t: ▽, type: trans}
   - Sft+ %
-  - Sft+ `
+  - '&dir_tilde'
   - '['
   - ']'
   - '&dir_btck'
