@@ -30,6 +30,76 @@
             bindings = <&kp LG(X)>;
             key-positions = <25 26>;
         };
+
+        num1 {
+            bindings = <&kp N1>;
+            key-positions = <1 13>;
+            layers = <0 1 2>;
+            require-prior-idle-ms = <50>;
+        };
+
+        num2 {
+            bindings = <&kp N2>;
+            key-positions = <2 14>;
+            layers = <0 1 2>;
+            require-prior-idle-ms = <50>;
+        };
+
+        num3 {
+            bindings = <&kp N3>;
+            key-positions = <3 15>;
+            layers = <0 1 2>;
+            require-prior-idle-ms = <50>;
+        };
+
+        num4 {
+            bindings = <&kp N4>;
+            key-positions = <4 16>;
+            layers = <0 1 2>;
+            require-prior-idle-ms = <50>;
+        };
+
+        num5 {
+            bindings = <&kp N5>;
+            key-positions = <5 17>;
+            layers = <0 1 2>;
+            require-prior-idle-ms = <50>;
+        };
+
+        num6 {
+            bindings = <&kp N6>;
+            key-positions = <6 18>;
+            layers = <0 1 2>;
+            require-prior-idle-ms = <50>;
+        };
+
+        num7 {
+            bindings = <&kp N7>;
+            key-positions = <7 19>;
+            layers = <0 1 2>;
+            require-prior-idle-ms = <50>;
+        };
+
+        num8 {
+            bindings = <&kp N8>;
+            key-positions = <8 20>;
+            layers = <0 1 2>;
+            require-prior-idle-ms = <50>;
+        };
+
+        num9 {
+            bindings = <&kp N9>;
+            key-positions = <9 21>;
+            layers = <0 1 2>;
+            require-prior-idle-ms = <50>;
+        };
+
+        num0 {
+            bindings = <&kp N0>;
+            key-positions = <10 22>;
+            layers = <0 1 2>;
+            require-prior-idle-ms = <50>;
+        };
     };
 
     behaviors {
