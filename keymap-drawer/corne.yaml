@@ -131,10 +131,10 @@ layers:
   - '0'
   symbols_layers:
   - {t: ▽, type: trans}
-  - Sft+ !
-  - Sft+ @
-  - Sft+ {
-  - Sft+ }
+  - '!'
+  - '@'
+  - '{'
+  - '}'
   - '&dir_dquot'
   - Sft+Alt+ ←
   - Sft+Gui+ LEFT ARROW
@@ -145,8 +145,8 @@ layers:
   - {t: ▽, type: trans}
   - \
   - Alt+Sft+ 2
-  - Sft+ (
-  - Sft+ )
+  - (
+  - )
   - '&dir_squot'
   - ←
   - ↓
@@ -155,14 +155,14 @@ layers:
   - VOLUME DOWN
   - VOLUME UP
   - {t: ▽, type: trans}
-  - Sft+ %
+  - '%'
   - '&dir_tilde'
   - '['
   - ']'
   - '&dir_btck'
   - {t: '&ntil', s: '&ntild_cap'}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Sft+ ↓
+  - Sft+ ↑
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
