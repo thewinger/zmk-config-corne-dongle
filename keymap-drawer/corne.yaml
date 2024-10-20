@@ -179,8 +179,8 @@ layers:
   - {t: ▽, type: trans}
   - Ctl+Sft+Gui+ 4
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Out USB
+  - Out BLE
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '&dongle_boot'
