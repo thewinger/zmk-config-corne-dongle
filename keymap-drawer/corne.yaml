@@ -207,7 +207,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: GAME_QW, h: toggle}
   - {t: GAMING_LAYER, h: toggle}
   - {t: ▽, type: trans}
   - {type: held}
@@ -258,6 +258,49 @@ layers:
   - Alt+ ↹
   - Esc
   - RIGHT GUI
+  GAME_QW:
+  - LEFT ALT
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - Hyper+ M
+  - {t: ESCAPE, h: Ctrl}
+  - A
+  - S
+  - D
+  - F
+  - G
+  - H
+  - {t: J, h: RIGHT GUI}
+  - {t: K, h: RIGHT ALT}
+  - {t: L, h: Ctrl}
+  - {t: ;, h: RIGHT SHIFT}
+  - ''''
+  - Shift
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - RIGHT SHIFT
+  - ESCAPE
+  - {t: ␣, h: num}
+  - {t: ↹, h: num}
+  - {t: ENTER, h: symbols_layers}
+  - {t: BACKSPACE, h: symbols_layers}
+  - ⌦
 combos:
 - p: [24, 35]
   k: Caps Word
