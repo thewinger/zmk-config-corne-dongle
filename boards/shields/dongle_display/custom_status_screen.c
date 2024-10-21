@@ -7,7 +7,8 @@
 #include "custom_status_screen.h"
 #include "widgets/battery_status.h"
 #include "widgets/modifiers.h"
-#include "widgets/bongo_cat.h"
+// #include "widgets/bongo_cat.h"
+#include "widgets/wpm.h"
 #include "widgets/layer_status.h"
 #include "widgets/output_status.h"
 #include "widgets/hid_indicators.h"
@@ -19,7 +20,8 @@ static struct zmk_widget_output_status output_status_widget;
 static struct zmk_widget_layer_status layer_status_widget;
 static struct zmk_widget_peripheral_battery_status peripheral_battery_status_widget;
 static struct zmk_widget_modifiers modifiers_widget;
-static struct zmk_widget_bongo_cat bongo_cat_widget;
+// static struct zmk_widget_bongo_cat bongo_cat_widget;
+static struct zmk_widget_bongo_cat wpm_widget;
 
 #if IS_ENABLED(CONFIG_ZMK_HID_INDICATORS)
 static struct zmk_widget_hid_indicators hid_indicators_widget;
@@ -42,8 +44,10 @@ lv_obj_t *zmk_display_status_screen()
 	zmk_widget_output_status_init(&output_status_widget, screen);
 	lv_obj_align(zmk_widget_output_status_obj(&output_status_widget), LV_ALIGN_TOP_MID, 0, 0);
 
-	zmk_widget_bongo_cat_init(&bongo_cat_widget, screen);
-	lv_obj_align(zmk_widget_bongo_cat_obj(&bongo_cat_widget), LV_ALIGN_CENTER, 0, 0);
+	// zmk_widget_bongo_cat_init(&bongo_cat_widget, screen);
+	// lv_obj_align(zmk_widget_bongo_cat_obj(&bongo_cat_widget), LV_ALIGN_CENTER, 0, 0);
+	zmk_widget_wpm_init(&wpm_widget, screen);
+	lv_obj_align(zmk_widget_wpm_obj(&wpm_widget), LV_ALIGN_CENTER, 0, 0);
 
 	zmk_widget_modifiers_init(&modifiers_widget, screen);
 	lv_obj_align(zmk_widget_modifiers_obj(&modifiers_widget), LV_ALIGN_BOTTOM_LEFT, 0, 0);
