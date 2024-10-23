@@ -270,7 +270,7 @@ layers:
   - I
   - O
   - P
-  - Hyper+ M
+  - {t: GAME_QW, h: toggle}
   - {t: ESCAPE, h: Ctrl}
   - A
   - S
@@ -295,7 +295,7 @@ layers:
   - .
   - /
   - RIGHT SHIFT
-  - ESCAPE
+  - LEFT GUI
   - {t: ␣, h: num}
   - {t: ↹, h: num}
   - {t: ENTER, h: symbols_layers}
