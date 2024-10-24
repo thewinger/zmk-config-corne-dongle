@@ -296,9 +296,9 @@ layers:
   - /
   - RIGHT SHIFT
   - LEFT GUI
-  - {t: ␣, h: num}
-  - {t: ↹, h: num}
-  - {t: ENTER, h: symbols_layers}
+  - ␣
+  - ↹
+  - ENTER
   - {t: BACKSPACE, h: symbols_layers}
   - ⌦
 combos:
