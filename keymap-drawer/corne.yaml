@@ -37,7 +37,7 @@ layers:
   - .
   - /
   - RIGHT SHIFT
-  - ESCAPE
+  - {t: ESCAPE, h: Meh+ LEFT GUI}
   - {t: ␣, h: num}
   - {t: ↹, h: num}
   - {t: ENTER, h: symbols_layers}
